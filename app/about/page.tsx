@@ -53,6 +53,7 @@ export default function AboutPage() {
     'On-time delivery guarantee',
     'Post-launch support and optimization'
   ]
+  
 
   return (
     <div className="min-h-screen">
@@ -109,7 +110,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {approaches.map((approach, index) => (
-              <div 
+              <div
                 key={approach.title}
                 className="bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition-all duration-300 hover:scale-105"
               >
@@ -129,7 +130,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Us?</h2>
               <p className="text-gray-400 text-lg mb-8">
-                We combine technical expertise with business acumen to deliver solutions that drive real results. 
+                We combine technical expertise with business acumen to deliver solutions that drive real results.
                 Our commitment to excellence and client satisfaction sets us apart in the industry.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -143,8 +144,8 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <div className="bg-gradient-to-br from-emerald-500/20 to-teal-600/20 p-8 rounded-2xl">
-                <img 
-                  src="/professional-team-computers.png" 
+                <img
+                  src="/professional-team-computers.png"
                   alt="Our team at work"
                   className="w-full h-auto rounded-lg"
                 />
@@ -159,19 +160,19 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Grow Together</h2>
           <p className="text-gray-400 text-lg mb-8 max-w-3xl mx-auto">
-            Ready to take your business to the next level? Partner with Snapwise Solutions and let's build 
+            Ready to take your business to the next level? Partner with Snapwise Solutions and let's build
             something amazing together. Our team is excited to discuss your project and help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center group"
             >
               Start Your Project
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link 
-              href="/services" 
+            <Link
+              href="/services"
               className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300"
             >
               View Our Services

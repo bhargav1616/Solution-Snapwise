@@ -77,6 +77,8 @@ export default function CareerPage() {
     })
   }
 
+  
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}

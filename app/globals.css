@@ -265,3 +265,206 @@ html {
   background-size: 200% 200%;
   animation: border-gradient 3s ease infinite;
 }
+
+
+.tech-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.tech-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tech-tabs button {
+  padding: 1rem 2rem;
+  background-color: #000000;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tech-tabs button:hover,
+.tech-tabs .active-tab {
+  background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+  color: black;
+}
+
+.tech-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.tech-box {
+  width: 150px;
+  text-align: center;
+}
+
+.tech-box img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* Start Web Process Section */
+.web-process-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.web-img {
+  display: flex;
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* End Web Process Section */
+
+/*Start happy-customer-section */
+.stats-section {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.stats-column {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  min-width: 200px;
+}
+
+.stat-block {
+  text-align: center;
+}
+
+.stat-block h2 {
+  color: #534bd7;
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.stat-block p {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.stats-image {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px;
+}
+
+.stats-image img {
+  width: 100%;
+  height: auto;
+}
+
+.stat-center {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.stat-center h2 {
+  color: #534bd7;
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.stat-center p {
+  font-size: 12px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+@media (max-width: 500px) {
+  .stats-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .stats-column {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .stat-block {
+    width: 45%;
+    text-align: center;
+  }
+
+  .stats-image {
+    order: 2;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .stat-center {
+    position: static;
+    transform: none;
+    padding: 50px 0;
+    /* margin: 50px 0; */
+  }
+}
+/*End happy-customer-section */
+
+.content-title {
+  font-size: 2rem;
+  font-weight: 900;
+  font-weight: 400;
+  font-style: normal;
+  color: #fedc31;
+  text-align: center;
+}
+
+.floating-image {
+  animation: floatUpDown 4s ease-in-out infinite;
+  position: relative;
+  margin-top: 50px;
+}
+@keyframes floatUpDown {
+  0% {
+    top: 0px;
+  }
+
+  50% {
+    top: -20px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
+.bg-gradient-custom{
+    background: linear-gradient(to bottom, #8b5cf6, #06b6d4);
+}

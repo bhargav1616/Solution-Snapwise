@@ -7,6 +7,7 @@ import Link from 'next/link'
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
   const [activeService, setActiveService] = useState(0)
+  const [selected, setSelected] = useState('frontend');
 
   useEffect(() => {
     setIsVisible(true)
@@ -75,6 +76,43 @@ export default function HomePage() {
     },
   ]
 
+  const techData = {
+    frontend: [
+      { name: 'React.js', img: '/png/react.png' },
+      { name: 'Angular.js', img: '/png/angular.png' },
+      { name: 'Vue.js', img: '/png/vue.png' },
+      { name: 'HTML5', img: '/png/html.png' },
+      { name: 'CSS3', img: '/png/css.png' },
+      { name: 'NPM', img: '/png/npm.png' },
+      { name: 'Bootstrap', img: '/png/bootstrap.png' },
+    ],
+    backend: [
+      { name: 'Node.js', img: '/png/nodejs.png' },
+      { name: 'Express', img: '/png/express.png' },
+      { name: 'Java', img: '/png/java.png' },
+      { name: 'Python', img: '/png/python.png' },
+      { name: 'PHP', img: '/png/php.png' },
+      { name: 'Laravel', img: '/png/laravel.png' },
+    ],
+    database: [
+      { name: 'MongoDB', img: '/png/mongodb.png' },
+      { name: 'MySQL', img: '/png/mysql.png' },
+      { name: 'PostgreSQL', img: '/png/postgresql.png' },
+      { name: 'Firebase', img: '/png/firebase.png' },
+    ],
+    mobile: [
+      { name: 'Flutter', img: '/png/flutter.png' },
+      { name: 'React Native', img: '/png/reactnative.png' },
+      { name: 'ios', img: '/png/ios.png' },
+      { name: 'Android', img: '/png/andriod.png' },
+    ],
+    Devops: [
+      { name: 'AWS', img: '/png/aws.png' },
+      { name: 'GCP', img: '/png/gcp.png' },
+      { name: 'Digital Ocean', img: '/png/digitalocean.png' },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-neutral-950">
       {/* Hero Section */}
@@ -130,7 +168,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Preview */}
-      <section className="py-24 bg-neutral-900/50">
+      <section className="pt-24 bg-neutral-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">
@@ -188,25 +226,37 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-            {technologies.map((tech, index) => (
-              <div
-                key={tech.name}
-                className="group relative bg-neutral-800/30 backdrop-blur-sm p-6 rounded-2xl border border-neutral-700 hover:border-violet-500/50 transition-all duration-300 hover:scale-110 text-center"
-              >
-                <div className="mb-4">
-                  <img src={tech.logo} alt={tech.name} className="h-12 mx-auto" />
-                </div>
-                <h3 className="text-sm font-bold text-white mb-1">{tech.name}</h3>
-                <p className="text-xs text-violet-400">{tech.category}</p>
+          <div className="tech-container">
+            <div className="tech-tabs">
+              {Object.keys(techData).map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelected(category)}
+                  className={selected === category ? 'active-tab' : ''}
+                >
+                  {category.toUpperCase()}
+                </button>
+              ))}
+            </div>
 
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-violet-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-            ))}
+            <div className="tech-images">
+              {techData[selected].map((tech) => (
+                <div key={tech.name} className="tech-box">
+                  <img src={tech.img} alt={tech.name} />
+                  <p>{tech.name}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Web Process */}
+      <div className='web-process-section'>
+        {/* <h1 className='content-title '> <span className='wwd-title'>We Simplify Web </span>Development Process</h1> */}
+        <p className='underline'></p>
+        <img src="/web_process.jpg" alt="" className='web-img' />
+      </div>
 
       {/* Stats Section */}
       <section className="py-24 bg-gradient-to-r from-violet-500/10 via-neutral-900 to-cyan-500/10">
@@ -262,6 +312,41 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Happy Custostats-sectionmer */}
+      <div className="stats-section">
+        <h1 className='content-title'>A Track Record Of  <span className='wwd-title'> Excellence And Happy</span> Customer</h1>
+        <p className='des'>Snapwise Solution was born in 2015. We brought together the best software development talent with a mission to make a mark in the world of IT. We've since expanded our services, built an international reputation and helped hundreds of clients.</p>
+        <div className="stats-column">
+          <div className="stat-block">{/* Left Side Top */}
+            <h2>150+</h2>
+            <p>HAPPY CLIENTS</p>
+          </div>
+          <div className="stat-block">
+            <h2>200+</h2>
+            <p>SUCCESSFULLY PROJECT DELIVERED</p>
+          </div>
+        </div>
+
+        <div className="stats-image">
+          <img src="/happy_customer.png" alt="Target Illustration" className="floating-image" />
+          <div className="stat-center">
+            <h2>6+</h2>
+            <p>YEARS OF EXPERIENCE</p>
+          </div>
+        </div>
+
+        <div className="stats-column">
+          <div className="stat-block">{/* Right Side Top */}
+            <h2>90+</h2>
+            <p>SKILLED DEVELOPERS</p>
+          </div>
+          <div className="stat-block">
+            <h2>16+</h2>
+            <p>COUNTRIES SERVED</p>
+          </div>
+        </div>
+      </div>
+
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -281,6 +366,6 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-    </div>
+    </div >
   )
 }
