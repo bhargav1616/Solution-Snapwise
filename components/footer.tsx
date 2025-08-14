@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { Mail, Phone, MapPin, Github, Twitter, Linkedin, Instagram, Hexagon } from 'lucide-react'
+import Link from "next/link"
+import { Mail, Phone, MapPin, Github, Twitter, Linkedin, Instagram, Hexagon } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -10,16 +10,19 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <div className="relative">
-                <img
-                  src="/logo.png"
-                  alt="Snapwise Logo"
-                  style={{ width: '140px', height: 'auto' }}
-                  className=" object-contain group-hover:scale-205 transition-transform duration-300"/>
+                <Hexagon className="w-10 h-10 text-violet-400" fill="currentColor" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-neutral-900 font-black text-sm">S</span>
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-white">SNAPWISE</span>
+                <span className="text-xs text-violet-400 -mt-1 tracking-widest">SOLUTIONS</span>
               </div>
             </div>
             <p className="text-neutral-400 mb-8 max-w-md leading-relaxed">
-              Crafting digital experiences that push boundaries and redefine possibilities.
-              We turn complex challenges into elegant solutions.
+              Crafting digital experiences that push boundaries and redefine possibilities. We turn complex challenges
+              into elegant solutions.
             </p>
             <div className="flex space-x-4">
               {[Github, Twitter, Linkedin, Instagram].map((Icon, index) => (
@@ -38,10 +41,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold mb-6 text-lg">Navigation</h3>
             <ul className="space-y-4">
-              {['Home', 'About Us', 'Services', 'Career', 'Contact'].map((link, index) => (
+              {["Home", "About Us", "Services", "Portfolio", "Career", "Contact"].map((link, index) => (
                 <li key={index}>
                   <Link
-                    href={`/${link.toLowerCase().replace(' ', '-')}`}
+                    href={link === "About Us" ? "/about" : `/${link.toLowerCase().replace(" ", "-")}`}
                     className="text-neutral-400 hover:text-violet-400 transition-colors duration-300 flex items-center group"
                   >
                     <div className="w-2 h-2 bg-violet-500 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -62,7 +65,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-sm text-neutral-500">Email</p>
-                  <p>Snapwisesolutions@gmail.com</p>
+                  <p>hello@snapwise.dev</p>
                 </div>
               </li>
               <li className="flex items-start space-x-3 text-neutral-400">
@@ -71,7 +74,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-sm text-neutral-500">Phone</p>
-                  <p>+44 7404 758487</p>
+                  <p>+1 (555) 123-4567</p>
                 </div>
               </li>
               <li className="flex items-start space-x-3 text-neutral-400">
@@ -80,7 +83,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-sm text-neutral-500">Location</p>
-                  <p>San Francisco, UK</p>
+                  <p>San Francisco, CA</p>
                 </div>
               </li>
             </ul>
@@ -89,13 +92,17 @@ export default function Footer() {
 
         <div className="border-t border-neutral-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-neutral-500 text-sm">
-              © 2024 Snapwise Solutions. Crafted with precision.
-            </p>
+            <p className="text-neutral-500 text-sm">© 2024 Snapwise Solutions. Crafted with precision.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="#" className="text-neutral-500 hover:text-violet-400 text-sm transition-colors">Privacy</Link>
-              <Link href="#" className="text-neutral-500 hover:text-violet-400 text-sm transition-colors">Terms</Link>
-              <Link href="#" className="text-neutral-500 hover:text-violet-400 text-sm transition-colors">Cookies</Link>
+              <Link href="#" className="text-neutral-500 hover:text-violet-400 text-sm transition-colors">
+                Privacy
+              </Link>
+              <Link href="#" className="text-neutral-500 hover:text-violet-400 text-sm transition-colors">
+                Terms
+              </Link>
+              <Link href="#" className="text-neutral-500 hover:text-violet-400 text-sm transition-colors">
+                Cookies
+              </Link>
             </div>
           </div>
         </div>

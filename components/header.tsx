@@ -1,18 +1,19 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import Link from 'next/link'
-import { Menu, X, Hexagon } from 'lucide-react'
+import { useState } from "react"
+import Link from "next/link"
+import { Menu, X, Hexagon } from "lucide-react"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Career', href: '/career' },
-    { name: 'Contact', href: '/contact' },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Career", href: "/career" },
+    { name: "Contact", href: "/contact" },
   ]
 
   return (
@@ -22,15 +23,21 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
-              <img
-                src="/logo.png"
-                alt="Snapwise Logo"
-                style={{ width: '140px', height: 'auto' }}
-                className=" object-contain group-hover:scale-205 transition-transform duration-300"
+              <Hexagon
+                className="w-10 h-10 text-violet-400 group-hover:text-cyan-400 transition-colors duration-300"
+                fill="currentColor"
               />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="text-neutral-900 font-black text-sm">S</span>
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-white group-hover:text-violet-400 transition-colors duration-300">
+                SNAPWISE
+              </span>
+              <span className="text-xs text-violet-400 -mt-1 tracking-widest">SOLUTIONS</span>
             </div>
           </Link>
-
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -49,17 +56,14 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a
-              href="https://wa.me/447404758487?text=Hi%2C%20I%20am%20interested%20in%20your%20services"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="relative overflow-hidden bg-gradient-to-r from-violet-600 to-cyan-600 text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/25 group"
             >
               <span className="relative z-10">Get Quote</span>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-violet-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </a>
+            </Link>
           </div>
-
 
           {/* Mobile menu button */}
           <button
@@ -84,13 +88,6 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
-              <Link
-                href="/contact"
-                className="mx-4 mt-4 bg-gradient-to-r from-violet-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-center"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Get Quote
-              </Link>
             </nav>
           </div>
         )}
