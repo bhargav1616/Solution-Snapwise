@@ -93,14 +93,14 @@ export default function ServicesPage() {
       title: 'The LeanSuit - Digital Solution for Lean Manufacturing',
       category: 'Software Development',
       description: 'Simplify work, improve efficiency, and engage frontline employees — all in one place.',
-      image: '/The_LeanSuit.png',
+      image: '/TheLeanSuit.png',
       link: 'https://theleansuite.com/'
     },
     {
       title: 'Interaction Studio - NLP Chat bot Solution',
       category: 'CRM Development',
       description: 'An advanced platform for developers to build Conversational Actions with advanced NLP Cognitive Cores. With Intents, Reponse Library and Knowledge Graphs, complex use cases can be seamlessly realized with multi channel integrations.',
-      image: '/polynomial.png',
+      image: '/polynomial.PNG',
       link: 'https://www.polynomial.ai/solution'
     },
     {

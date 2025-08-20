@@ -151,7 +151,7 @@ export default function PortfolioPage() {
     },
     {
       id: 7,
-      project_img: '/patel_matrimony.png',
+      project_img: '/patelmatrimony.png',
       name: "Patel's vivah -Matrimony app for patel community",
       client: "Financial Services",
       category: "Mobile Development",
