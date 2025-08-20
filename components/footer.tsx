@@ -65,7 +65,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-sm text-neutral-500">Email</p>
-                  <p>hello@snapwise.dev</p>
+                  <p>Snapwisesolutions@gmail.com</p>
                 </div>
               </li>
               <li className="flex items-start space-x-3 text-neutral-400">
@@ -74,7 +74,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-sm text-neutral-500">Phone</p>
-                  <p>+1 (555) 123-4567</p>
+                  <p>+44 7404 758487</p>
                 </div>
               </li>
               <li className="flex items-start space-x-3 text-neutral-400">
@@ -83,7 +83,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-sm text-neutral-500">Location</p>
-                  <p>San Francisco, CA</p>
+                  <p>San Francisco, UK</p>
                 </div>
               </li>
             </ul>

@@ -53,31 +53,46 @@ export default function CareerPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    alert('Application submitted successfully! We will get back to you soon.')
-    setIsSubmitting(false)
-    
-    // Reset form
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phoneNumber: '',
-      applyFor: '',
-      yearsOfExperience: '',
-      currentCTC: '',
-      expectedCTC: '',
-      currentCompany: '',
-      noticePeriod: '',
-      additionalMessage: '',
-      resume: null
-    })
+
+    try {
+      const formDataToSend = new FormData()
+      Object.entries(formData).forEach(([key, value]) => {
+        if (value) formDataToSend.append(key, value as any)
+      })
+
+      const res = await fetch("/api/send-application", {
+        method: "POST",
+        body: formDataToSend,
+      })
+
+      if (res.ok) {
+        alert("✅ Application sent successfully!")
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phoneNumber: "",
+          applyFor: "",
+          yearsOfExperience: "",
+          currentCTC: "",
+          expectedCTC: "",
+          currentCompany: "",
+          noticePeriod: "",
+          additionalMessage: "",
+          resume: null
+        })
+      } else {
+        alert("❌ Failed to send application. Try again.")
+      }
+    } catch (err) {
+      console.error(err)
+      alert("⚠️ Something went wrong!")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
-  
+
 
   return (
     <div className="min-h-screen">
@@ -136,7 +151,7 @@ export default function CareerPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Apply Now</h2>
             <p className="text-gray-400 text-lg">Fill out the form below to start your journey with us</p>
           </div>
-          
+
           <form onSubmit={handleSubmit} className="bg-slate-800 p-8 rounded-lg">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* First Name */}

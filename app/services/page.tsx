@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from "framer-motion";
 import { Globe, Smartphone, Code, Database, ShoppingCart, Puzzle, Settings, Building } from 'lucide-react'
 import Link from 'next/link'
 
@@ -75,40 +76,46 @@ export default function ServicesPage() {
 
   const portfolioItems = [
     {
-      title: 'E-Learning Platform',
+      title: 'Luxurious Business Space Renovation',
       category: 'Web Development',
-      description: 'Comprehensive online learning platform with video streaming and progress tracking.',
-      image: '/e-learning-dashboard.png'
+      description: 'Transforming spaces, creating dreams.',
+      image: '/myukbuilders.png',
+      link: 'https://www.myukbuilders.co.uk/'
     },
     {
-      title: 'Food Delivery App',
+      title: 'DJ Kapil',
       category: 'Mobile Development',
-      description: 'Full-featured food delivery application with real-time tracking and payments.',
-      image: '/food-delivery-app.png'
+      description: 'DJ Kapil, born in Ahmedabad (India) and now based in London (UK), began his professional DJ career 10 years ago and has performed at festivals and events worldwide.',
+      image: '/djkapil.png',
+      link: 'https://djkapil.com/'
     },
     {
-      title: 'Healthcare Management System',
+      title: 'The LeanSuit - Digital Solution for Lean Manufacturing',
       category: 'Software Development',
-      description: 'Complete healthcare management solution for hospitals and clinics.',
-      image: '/healthcare-management-dashboard.png'
+      description: 'Simplify work, improve efficiency, and engage frontline employees — all in one place.',
+      image: '/The_LeanSuit.png',
+      link: 'https://theleansuite.com/'
     },
     {
-      title: 'Real Estate CRM',
+      title: 'Interaction Studio - NLP Chat bot Solution',
       category: 'CRM Development',
-      description: 'Custom CRM solution for real estate agencies with lead management.',
-      image: '/real-estate-crm-interface.png'
+      description: 'An advanced platform for developers to build Conversational Actions with advanced NLP Cognitive Cores. With Intents, Reponse Library and Knowledge Graphs, complex use cases can be seamlessly realized with multi channel integrations.',
+      image: '/polynomial.png',
+      link: 'https://www.polynomial.ai/solution'
     },
     {
-      title: 'Fashion E-commerce Store',
+      title: 'Creating beautiful spaces for Business',
       category: 'eCommerce Development',
-      description: 'Modern e-commerce platform for fashion retail with AR try-on features.',
-      image: '/fashion-ecommerce-website.png'
+      description: 'At MM Installing, we believe that quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction and skilful execution',
+      image: '/mminstalling.png',
+      link: 'https://mminstalling.com/'
     },
     {
-      title: 'Corporate Website',
+      title: 'Pramukh Consultancy',
       category: 'CMS Development',
-      description: 'Professional corporate website with custom CMS for content management.',
-      image: '/corporate-homepage.png'
+      description: 'We at Pramukh Consultant are not only concerned with the quality of services but also care for our approach, value, commitment and behaviors towards fulfillment of client',
+      image: '/pramukhconsultancy.png',
+      link: 'https://pramukhconsultancy.org/'
     },
   ]
 
@@ -159,24 +166,24 @@ export default function ServicesPage() {
         "Bachelor’s Degree preferred in Computer Science or related fields."
     }
     ,
-  {
-    title: "Digital Marketing Executive (Intern / Trainee)",
-    location: "Remote / Ahmedabad",
-    qualification: "Any Graduate",
-    experience: "Fresher / 0-1 Year (Internship)",
-    description: [
-      "Assist in planning and executing digital marketing campaigns across social and search channels.",
-      "Support content creation for blogs, social media posts and ad copy.",
-      "Help with basic SEO tasks: keyword research, on-page checks, and performance tracking.",
-      "Monitor campaign performance and prepare simple reports.",
-      "Learn to run paid campaigns (Google Ads / Facebook Ads) under guidance.",
-      "Coordinate with design and development teams for creatives and landing pages."
-    ],
-    skills:
-      "Basic understanding of Social Media, SEO fundamentals, Content Writing, Google Analytics (basic), eagerness to learn paid ads.",
-    education:
-      "Any degree; marketing or related background preferred but not mandatory."
-  },
+    {
+      title: "Digital Marketing Executive (Intern / Trainee)",
+      location: "Remote / Ahmedabad",
+      qualification: "Any Graduate",
+      experience: "Fresher / 0-1 Year (Internship)",
+      description: [
+        "Assist in planning and executing digital marketing campaigns across social and search channels.",
+        "Support content creation for blogs, social media posts and ad copy.",
+        "Help with basic SEO tasks: keyword research, on-page checks, and performance tracking.",
+        "Monitor campaign performance and prepare simple reports.",
+        "Learn to run paid campaigns (Google Ads / Facebook Ads) under guidance.",
+        "Coordinate with design and development teams for creatives and landing pages."
+      ],
+      skills:
+        "Basic understanding of Social Media, SEO fundamentals, Content Writing, Google Analytics (basic), eagerness to learn paid ads.",
+      education:
+        "Any degree; marketing or related background preferred but not mandatory."
+    },
     {
       title: "Graphics & Web Designer",
       description: [
@@ -207,7 +214,7 @@ export default function ServicesPage() {
       qualification: "Graduation",
       experience: "1-3 YEARS"
     }
-];
+  ];
 
   return (
     <div className="min-h-screen">
@@ -296,11 +303,23 @@ export default function ServicesPage() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-400">{item.description}</p>
+                  <p className="text-gray-400 mb-4">{item.description}</p>
+                  {/* Button for project link */}
+                  {item.link && (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded transition-colors duration-300"
+                    >
+                      View Project
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
           </div>
+
           <div className="text-center mt-12">
             <Link
               href="/contact"
@@ -328,38 +347,53 @@ export default function ServicesPage() {
               <span>{openIndex === index ? "-" : "+"}</span>
             </button>
 
-            {openIndex === index && (
-              <div className="bg-white p-4 text-gray-800">
-                <ul className="list-disc pl-6 space-y-1">
-                  {job.description.map((desc, i) => (
-                    <li key={i}>{desc}</li>
-                  ))}
-                </ul>
-                <div className="bg-green-50 border border-green-300 p-3 mt-4">
-                  <p>
-                    <strong>Skills:</strong> {job.skills}
-                  </p>
-                  <p className="text-green-600 font-semibold">
-                    Required education
-                  </p>
-                  <p>{job.education}</p>
-                </div>
-                <div className="flex gap-6 mt-4">
-                  <p>
-                    <strong>LOCATION:</strong> {job.location}
-                  </p>
-                  <p>
-                    <strong>QUALIFICATION:</strong> {job.qualification}
-                  </p>
-                  <p>
-                    <strong>EXPERIENCE:</strong> {job.experience}
-                  </p>
-                </div>
-                <button className="bg-blue-600 text-white px-4 py-2 mt-4 rounded">
-                  Apply Now
-                </button>
-              </div>
-            )}
+            <AnimatePresence>
+              {openIndex === index && (
+                <motion.div
+                  key="content"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <div className="bg-slate-900 p-4 text-white-800">
+                    <ul className="list-disc pl-6 space-y-1">
+                      {job.description.map((desc, i) => (
+                        <li key={i}>{desc}</li>
+                      ))}
+                    </ul>
+                    <div className="bg-green-50 border text-black border-green-300 p-3 mt-4">
+                      <p>
+                        <strong>Skills:</strong> {job.skills}
+                      </p>
+                      <p className="text-green-600 font-semibold">
+                        Required education
+                      </p>
+                      <p>{job.education}</p>
+                    </div>
+                    <div className="flex gap-6 mt-4">
+                      <p>
+                        <strong>LOCATION:</strong> {job.location}
+                      </p>
+                      <p>
+                        <strong>QUALIFICATION:</strong> {job.qualification}
+                      </p>
+                      <p>
+                        <strong>EXPERIENCE:</strong> {job.experience}
+                      </p>
+                    </div>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="bg-blue-600 text-white px-4 py-2 mt-4 rounded"
+                    >
+                      <Link href="/career">Apply Now</Link>
+                    </motion.button>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>

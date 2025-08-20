@@ -9,6 +9,27 @@ export default function HomePage() {
   const [activeService, setActiveService] = useState(0)
   const [selected, setSelected] = useState('frontend');
 
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+  const [offsetY, setOffsetY] = useState(0)
+
+  // Scroll → background zoom
+  useEffect(() => {
+    const handleScroll = () => setOffsetY(window.scrollY)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  // Mouse move → parallax
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 30
+      const y = (e.clientY / window.innerHeight - 0.5) * 30
+      setMousePos({ x, y })
+    }
+    window.addEventListener("mousemove", handleMouseMove)
+    return () => window.removeEventListener("mousemove", handleMouseMove)
+  }, [])
+
   useEffect(() => {
     setIsVisible(true)
   }, [])
@@ -54,27 +75,28 @@ export default function HomePage() {
 
   const testimonials = [
     {
-      name: 'Alex Chen',
+      name: 'Arun Patel',
       role: 'CTO at TechFlow',
       content: 'Snapwise delivered beyond our expectations. Their technical expertise and attention to detail is unmatched.',
       avatar: '👨‍💻',
       rating: 5
     },
     {
-      name: 'Sarah Williams',
+      name: 'Bhargav Jadav',
       role: 'Product Manager at InnovateCorp',
       content: 'Working with Snapwise was a game-changer. They transformed our complex requirements into an elegant solution.',
       avatar: '👩‍💼',
       rating: 5
     },
     {
-      name: 'David Rodriguez',
+      name: 'Nisha Makwana',
       role: 'Founder of StartupX',
       content: 'The team at Snapwise is incredibly talented. They helped us scale from idea to production seamlessly.',
       avatar: '👨‍🚀',
       rating: 5
     },
   ]
+
 
   const techData = {
     frontend: [
@@ -168,7 +190,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Preview */}
-      <section className="pt-24 bg-neutral-900/50">
+      <section className="py-24 bg-neutral-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">
@@ -214,9 +236,48 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Robot & Social Section */}
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Background */}
+        <img
+          src="/Banner.jpg"
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-200"
+          style={{
+            transform: `scale(${1 + offsetY * 0.0015})`, // Zoom on scroll
+          }}
+        />
+
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        {/* Content wrapper (must be relative for proper transform) */}
+        <div className="relative z-10 flex items-center justify-center h-full">
+
+          {/* Social Icons */}
+          <img
+            src="/3d-icons.png"
+            className="absolute icons-width md:w-72 z-10 transition-transform duration-100"
+            style={{
+              transform: `translate(${mousePos.x * 0.9}px, ${mousePos.y * 0.9}px)`, // slow
+            }}
+          />
+
+          {/* Robot */}
+          <img
+            src="/Robot.png"
+            className="relative robot-width md:w-60 z-20 transition-transform duration-100"
+            style={{
+              transform: `translate(${mousePos.x}px, ${mousePos.y}px)`, // fast
+            }}
+          />
+
+        </div>
+      </section>
+
+
       {/* Technology Stack */}
-      <section className="py-24 bg-neutral-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-24 bg-neutral-950">
+        <div className="max-w-7xl mx-auto pt-6 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">
               Our <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">Tech Stack</span>
@@ -312,40 +373,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Happy Custostats-sectionmer */}
-      <div className="stats-section">
-        <h1 className='content-title'>A Track Record Of  <span className='wwd-title'> Excellence And Happy</span> Customer</h1>
-        <p className='des'>Snapwise Solution was born in 2015. We brought together the best software development talent with a mission to make a mark in the world of IT. We've since expanded our services, built an international reputation and helped hundreds of clients.</p>
-        <div className="stats-column">
-          <div className="stat-block">{/* Left Side Top */}
-            <h2>150+</h2>
-            <p>HAPPY CLIENTS</p>
-          </div>
-          <div className="stat-block">
-            <h2>200+</h2>
-            <p>SUCCESSFULLY PROJECT DELIVERED</p>
-          </div>
-        </div>
-
-        <div className="stats-image">
-          <img src="/happy_customer.png" alt="Target Illustration" className="floating-image" />
-          <div className="stat-center">
-            <h2>6+</h2>
-            <p>YEARS OF EXPERIENCE</p>
-          </div>
-        </div>
-
-        <div className="stats-column">
-          <div className="stat-block">{/* Right Side Top */}
-            <h2>90+</h2>
-            <p>SKILLED DEVELOPERS</p>
-          </div>
-          <div className="stat-block">
-            <h2>16+</h2>
-            <p>COUNTRIES SERVED</p>
-          </div>
-        </div>
-      </div>
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-600">
