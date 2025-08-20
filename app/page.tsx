@@ -316,7 +316,7 @@ export default function HomePage() {
       <div className='web-process-section'>
         {/* <h1 className='content-title '> <span className='wwd-title'>We Simplify Web </span>Development Process</h1> */}
         <p className='underline'></p>
-        <img src="/web_process.jpg" alt="" className='web-img' />
+        <img src="/web_proces.jpg" alt="" className='web-img' />
       </div>
 
       {/* Stats Section */}

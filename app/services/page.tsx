@@ -79,21 +79,21 @@ export default function ServicesPage() {
       title: 'Luxurious Business Space Renovation',
       category: 'Web Development',
       description: 'Transforming spaces, creating dreams.',
-      image: '/myukbuilders.png',
+      image: '/myukbuilders.PNG',
       link: 'https://www.myukbuilders.co.uk/'
     },
     {
       title: 'DJ Kapil',
       category: 'Mobile Development',
       description: 'DJ Kapil, born in Ahmedabad (India) and now based in London (UK), began his professional DJ career 10 years ago and has performed at festivals and events worldwide.',
-      image: '/djkapil.png',
+      image: '/djkapil.PNG',
       link: 'https://djkapil.com/'
     },
     {
       title: 'The LeanSuit - Digital Solution for Lean Manufacturing',
       category: 'Software Development',
       description: 'Simplify work, improve efficiency, and engage frontline employees — all in one place.',
-      image: '/TheLeanSuit.png',
+      image: '/TheLeanSuit.PNG',
       link: 'https://theleansuite.com/'
     },
     {
@@ -107,14 +107,14 @@ export default function ServicesPage() {
       title: 'Creating beautiful spaces for Business',
       category: 'eCommerce Development',
       description: 'At MM Installing, we believe that quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction and skilful execution',
-      image: '/mminstalling.png',
+      image: '/mminstalling.PNG',
       link: 'https://mminstalling.com/'
     },
     {
       title: 'Pramukh Consultancy',
       category: 'CMS Development',
       description: 'We at Pramukh Consultant are not only concerned with the quality of services but also care for our approach, value, commitment and behaviors towards fulfillment of client',
-      image: '/pramukhconsultancy.png',
+      image: '/pramukhconsultancy.PNG',
       link: 'https://pramukhconsultancy.org/'
     },
   ]

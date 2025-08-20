@@ -47,7 +47,7 @@ export default function PortfolioPage() {
   const projects = [
     {
       id: 1,
-      project_img: '/myukbuilders.png',
+      project_img: '/myukbuilders.PNG',
       name: "Luxurious Business Space Renovation",
       client: "Corporate Retail",
       category: "Web Development",
@@ -63,7 +63,7 @@ export default function PortfolioPage() {
     },
     {
       id: 2,
-      project_img: '/djkapil.png',
+      project_img: '/djkapil.PNG',
       name: "DJ Kapil",
       client: "Service Provide",
       category: "Web Development",
@@ -83,7 +83,7 @@ export default function PortfolioPage() {
     },
     {
       id: 3,
-      project_img: '/The_LeanSuit.png',
+      project_img: '/TheLeanSuit.PNG',
       name: "The LeanSuit - Digital Solution for Lean Manufacturing",
       client: "Educations Solutions",
       category: "Web Development",
@@ -99,7 +99,7 @@ export default function PortfolioPage() {
     },
     {
       id: 4,
-      project_img: '/polynomial.png',
+      project_img: '/polynomial.PNG',
       name: "Interaction Studio - NLP Chat bot Solution",
       client: "Educations",
       category: "Web Development",
@@ -119,7 +119,7 @@ export default function PortfolioPage() {
     },
     {
       id: 5,
-      project_img: '/mminstalling.png',
+      project_img: '/mminstalling.PNG',
       name: "Creating beautiful spaces for Business",
       client: "Services Provide",
       category: "Web Development",
@@ -135,7 +135,7 @@ export default function PortfolioPage() {
     },
     {
       id: 6,
-      project_img: '/pramukhconsultancy.png',
+      project_img: '/pramukhconsultancy.PNG',
       name: "Pramukh Consultancy",
       client: "Financial Services",
       category: "Web Development",
@@ -151,7 +151,7 @@ export default function PortfolioPage() {
     },
     {
       id: 7,
-      project_img: '/patelmatrimony.png',
+      project_img: '/patelmatrimony.PNG',
       name: "Patel's vivah -Matrimony app for patel community",
       client: "Financial Services",
       category: "Mobile Development",
@@ -167,7 +167,7 @@ export default function PortfolioPage() {
     },
     {
       id: 8,
-      project_img: '/colife.png',
+      project_img: '/colife.PNG',
       name: "Colife -social networking",
       client: "Financial Services",
       category: "Mobile Development",
