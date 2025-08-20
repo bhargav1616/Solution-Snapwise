@@ -56,14 +56,17 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link
-              href="/contact"
+            <a
+              href="https://wa.me/447404758487?text=Hello%2C%20I%20want%20to%20get%20a%20quote."
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative overflow-hidden bg-gradient-to-r from-violet-600 to-cyan-600 text-white px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/25 group"
             >
               <span className="relative z-10">Get Quote</span>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-violet-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </Link>
+            </a>
           </div>
+
 
           {/* Mobile menu button */}
           <button
