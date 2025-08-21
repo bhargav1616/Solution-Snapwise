@@ -244,28 +244,28 @@ export default function PortfolioPage() {
       position: "Full Stack Developer",
       expertise: "React, Node.js, MongoDB",
       bio: "Passionate about creating scalable web applications with modern technologies.",
-      avatar: "/professional-developer-avatar.PNG",
+      avatar: "/fullstack.PNG",
     },
     {
       name: "Nisha Makwana",
       position: "UI/UX Designer",
       expertise: "Figma, Adobe XD, User Research",
       bio: "Crafting beautiful and intuitive user experiences that delight users.",
-      avatar: "/female-designer-avatar.PNG",
+      avatar: "/uiandux.PNG",
     },
     {
       name: "Jainik Patel",
       position: "DevOps Engineer",
       expertise: "AWS, Docker, Kubernetes",
       bio: "Ensuring smooth deployments and scalable infrastructure for all projects.",
-      avatar: "/devops-engineer-avatar.PNG",
+      avatar: "/devops.PNG",
     },
     {
       name: "Harshid Bhai",
       position: "Mobile Developer",
       expertise: "React Native, Flutter, iOS",
       bio: "Building cross-platform mobile apps that provide seamless user experiences.",
-      avatar: "/mobile-developer-avatar.PNG",
+      avatar: "/mobile.PNG",
     },
   ]
 
