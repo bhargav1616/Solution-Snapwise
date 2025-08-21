@@ -251,21 +251,21 @@ export default function PortfolioPage() {
       position: "UI/UX Designer",
       expertise: "Figma, Adobe XD, User Research",
       bio: "Crafting beautiful and intuitive user experiences that delight users.",
-      avatar: "/uiandux.PNG",
+      avatar: "/uiandux.png",
     },
     {
       name: "Jainik Patel",
       position: "DevOps Engineer",
       expertise: "AWS, Docker, Kubernetes",
       bio: "Ensuring smooth deployments and scalable infrastructure for all projects.",
-      avatar: "/devops.PNG",
+      avatar: "/devops.png",
     },
     {
       name: "Harshid Bhai",
       position: "Mobile Developer",
       expertise: "React Native, Flutter, iOS",
       bio: "Building cross-platform mobile apps that provide seamless user experiences.",
-      avatar: "/mobile.PNG",
+      avatar: "/mobile.png",
     },
   ]
 
