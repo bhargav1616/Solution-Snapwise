@@ -258,7 +258,7 @@ export default function PortfolioPage() {
       position: "DevOps Engineer",
       expertise: "AWS, Docker, Kubernetes",
       bio: "Ensuring smooth deployments and scalable infrastructure for all projects.",
-      avatar: "/devops.PNG",
+      avatar: "/djkapil.PNG",
     },
     {
       name: "Harshid Bhai",
