@@ -50,7 +50,7 @@ export default function PortfolioPage() {
       project_img: '/myukbuilders.PNG',
       name: "Luxurious Business Space Renovation",
       client: "Corporate Retail",
-      category: "Web Development",
+      category: "UI/UX",
       description:
         "Transforming corporate spaces into luxurious, innovative, and inspiring environments that blend design and functionality, elevating workspaces, brand image, and client experiences",
       problem: "Client needed a scalable online store to handle high traffic during sales events.",
@@ -86,7 +86,7 @@ export default function PortfolioPage() {
       project_img: '/TheLeanSuit.PNG',
       name: "The LeanSuit - Digital Solution for Lean Manufacturing",
       client: "Educations Solutions",
-      category: "Web Development",
+      category: "CRM Development",
       description:
         "Simplify work, improve efficiency, and engage frontline employees — all in one place.",
       problem: "Restaurant chain needed to expand their delivery service with a user-friendly mobile solution.",
@@ -122,7 +122,7 @@ export default function PortfolioPage() {
       project_img: '/mminstalling.PNG',
       name: "Creating beautiful spaces for Business",
       client: "Services Provide",
-      category: "Web Development",
+      category: "UI/UX",
       description:
         "At MM Installing, we believe that quality is never an accident; it is always the result of high intention, sincere effort, intelligent direction and skilful execution",
       problem: "Educational institute needed to transition to online learning during pandemic.",
@@ -269,7 +269,7 @@ export default function PortfolioPage() {
     },
   ]
 
-  const categories = ["All", "Web Development", "Mobile Development", "Software Development", "CRM Development"]
+  const categories = ["All",, "UI/UX" , "Web Development", "Mobile Development", "CRM Development"]
 
   const filteredProjects =
     activeFilter === "All" ? projects : projects.filter((project) => project.category === activeFilter)

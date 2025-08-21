@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X, Hexagon, ChevronDown, Calendar, Zap, Cloud } from "lucide-react"
+import { Menu, X, Hexagon, ChevronDown, Calendar, Zap, Cloud , Radar , Users } from "lucide-react"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -35,6 +35,18 @@ export default function Header() {
       name: "TempHeaven",
       href: "https://tempheaven.web.app/",
       icon: Cloud,
+      description: "TempHeaven provides quick and temporary email addresses.",
+    },
+    {
+      name: "LeanSuit",
+      href: "https://theleansuite.com/",
+      icon: Users,
+      description: "Digital Solution for Lean Manufacturing",
+    },
+    {
+      name: "Tracker.in",
+      href: "https://trakker.in/",
+      icon: Radar,
       description: "TempHeaven provides quick and temporary email addresses.",
     },
   ]
