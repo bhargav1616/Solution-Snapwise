@@ -338,10 +338,10 @@ export default function ServicesPage() {
           Current Openings
         </h2>
         {jobData.map((job, index) => (
-          <div key={index} className="border rounded mb-4">
+          <div key={index} className="border-green-300 rounded mb-4">
             <button
               onClick={() => toggleJob(index)}
-              className="w-full flex justify-between items-center bg-gradient-custom text-white px-4 py-3 font-semibold"
+              className="w-full flex justify-between items-center bg-slate-800 text-white px-4 py-3 font-semibold"
             >
               {job.title}
               <span>{openIndex === index ? "-" : "+"}</span>

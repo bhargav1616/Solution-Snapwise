@@ -237,7 +237,7 @@ export default function HomePage() {
       </section>
 
       {/* Robot & Social Section */}
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative h-[40vh] sm:h-[50vh] md:h-[70vh] lg:h-[85vh] xl:h-screen w-full overflow-hidden">
         {/* Background */}
         <img
           src="/Banner.jpg"
@@ -248,29 +248,42 @@ export default function HomePage() {
           }}
         />
 
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50 sm:bg-black/40"></div>
 
-        {/* Content wrapper (must be relative for proper transform) */}
-        <div className="relative z-10 flex items-center justify-center h-full">
-
-          {/* Social Icons */}
+        {/* Content wrapper */}
+        <div className="relative z-10 flex items-center justify-center h-full px-2 sm:px-4">
           <img
             src="/3d-icons.png"
-            className="absolute icons-width md:w-72 z-10 transition-transform duration-100"
+            className="absolute w-20 xs:w-24 sm:w-32 md:w-48 lg:w-60 xl:w-72 z-10 transition-transform duration-100"
             style={{
-              transform: `translate(${mousePos.x * 0.9}px, ${mousePos.y * 0.9}px)`, // slow
+              transform:
+                typeof window !== "undefined" && window.innerWidth > 768
+                  ? `translate(${mousePos.x * 0.9}px, ${mousePos.y * 0.9}px)`
+                  : "none",
             }}
+            alt="3D Icons"
           />
 
-          {/* Robot */}
           <img
             src="/Robot.png"
-            className="relative robot-width md:w-60 z-20 transition-transform duration-100"
+            className="relative robot-width xs:w-20 sm:w-24 md:w-32 lg:w-48 xl:w-60 z-20 transition-transform duration-100"
             style={{
-              transform: `translate(${mousePos.x}px, ${mousePos.y}px)`, // fast
+              transform:
+                typeof window !== "undefined" && window.innerWidth > 768
+                  ? `translate(${mousePos.x}px, ${mousePos.y}px)`
+                  : "none",
             }}
+            alt="Robot"
           />
+        </div>
 
+        <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 z-30 text-center sm:text-left">
+          <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 drop-shadow-lg">
+            Innovation in Motion
+          </h3>
+          <p className="text-sm sm:text-base text-white/90 drop-shadow-md max-w-md mx-auto sm:mx-0">
+            Experience the future of digital interaction
+          </p>
         </div>
       </section>
 

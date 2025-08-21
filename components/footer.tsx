@@ -63,27 +63,27 @@ export default function Footer() {
                 <div className="w-10 h-10 bg-violet-500/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
                   <Mail size={18} className="text-violet-400" />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <p className="text-sm text-neutral-500">Email</p>
-                  <p>Snapwisesolutions@gmail.com</p>
+                  <p className="text-sm sm:text-base break-all sm:break-words">Snapwisesolutions@gmail.com</p>
                 </div>
               </li>
               <li className="flex items-start space-x-3 text-neutral-400">
                 <div className="w-10 h-10 bg-cyan-500/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
                   <Phone size={18} className="text-cyan-400" />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <p className="text-sm text-neutral-500">Phone</p>
-                  <p>+44 7404 758487</p>
+                  <p className="text-sm sm:text-base">+44 7404 758487</p>
                 </div>
               </li>
               <li className="flex items-start space-x-3 text-neutral-400">
                 <div className="w-10 h-10 bg-indigo-500/10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
                   <MapPin size={18} className="text-indigo-400" />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <p className="text-sm text-neutral-500">Location</p>
-                  <p>San Francisco, UK</p>
+                  <p className="text-sm sm:text-base">San Francisco, UK</p>
                 </div>
               </li>
             </ul>

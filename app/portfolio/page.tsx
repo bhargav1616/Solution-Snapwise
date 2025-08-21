@@ -55,7 +55,7 @@ export default function PortfolioPage() {
         "Transforming corporate spaces into luxurious, innovative, and inspiring environments that blend design and functionality, elevating workspaces, brand image, and client experiences",
       problem: "Client needed a scalable online store to handle high traffic during sales events.",
       solution: "Developed a robust platform with microservices architecture, CDN integration, and automated scaling.",
-      technologies: ["HTML" , "SCSS" , "JavaScript" , "Firebase"],
+      technologies: ["HTML", "SCSS", "JavaScript", "Firebase"],
       image: "/ecommerce-dashboard.png",
       results: ["45% increase in conversion rate", "60% faster page load times", "99.9% uptime during peak sales"],
       liveUrl: "https://www.myukbuilders.co.uk/",
@@ -71,7 +71,7 @@ export default function PortfolioPage() {
         "DJ Kapil, born in Ahmedabad (India) and now based in London (UK), began his professional DJ career 10 years ago and has performed at festivals and events worldwide.",
       problem: "Manual processes were causing delays and errors in patient care management.",
       solution: "Digitized entire workflow with secure patient data management and automated scheduling.",
-      technologies: ["HTML" , "SCSS" , "JavaScript" , "Firebase"],
+      technologies: ["HTML", "SCSS", "JavaScript", "Firebase"],
       image: "/healthcare-system.png",
       results: [
         "70% reduction in appointment scheduling time",
@@ -91,7 +91,7 @@ export default function PortfolioPage() {
         "Simplify work, improve efficiency, and engage frontline employees — all in one place.",
       problem: "Restaurant chain needed to expand their delivery service with a user-friendly mobile solution.",
       solution: "Created intuitive mobile app with GPS tracking, multiple payment options, and push notifications.",
-      technologies: ["Ionic" , "Angular" , ".net"  ,"Fusion" ,  "Charts" ,  "Monorepo" ,  "Nx"],
+      technologies: ["Ionic", "Angular", ".net", "Fusion", "Charts", "Monorepo", "Nx"],
       image: "/food-delivery-mobile.png",
       results: ["200% increase in online orders", "4.8/5 app store rating", "30% customer retention improvement"],
       liveUrl: "https://theleansuite.com/",
@@ -107,7 +107,7 @@ export default function PortfolioPage() {
         "An advanced platform for developers to build Conversational Actions with advanced NLP Cognitive Cores. With Intents, Reponse Library and Knowledge Graphs, complex use cases can be seamlessly realized with multi channel integrations.",
       problem: "Real estate agency was losing leads due to poor follow-up and disorganized client data.",
       solution: "Built comprehensive CRM with automated workflows, lead scoring, and integrated communication tools.",
-      technologies: ["Angular" , "Nodejs"],
+      technologies: ["Angular", "Nodejs"],
       image: "/real-estate-crm.png",
       results: [
         "85% improvement in lead conversion",
@@ -143,7 +143,7 @@ export default function PortfolioPage() {
         "We at Pramukh Consultant are not only concerned with the quality of services but also care for our approach, value, commitment and behaviors towards fulfillment of client",
       problem: "Financial institution needed a secure, user-friendly mobile banking solution.",
       solution: "Created feature-rich mobile app with bank-grade security and intuitive user experience.",
-      technologies: ["HTML" ,"Bootstrap" ,"JavaScript" ],
+      technologies: ["HTML", "Bootstrap", "JavaScript"],
       image: "/fintech-mobile.png",
       results: ["300% increase in mobile transactions", "Zero security incidents", "4.9/5 user rating"],
       liveUrl: "https://pramukhconsultancy.org/",
@@ -159,7 +159,7 @@ export default function PortfolioPage() {
         "The most trusted matrimony service for Patels. Patel's Vivah offers a large number of matches from various Patel communities like Leva, Kadva across the world.Thousands of Patels brides and grooms from all over the world have successfully found their life partner using Patel's Vivah app.",
       problem: "Financial institution needed a secure, user-friendly mobile banking solution.",
       solution: "Created feature-rich mobile app with bank-grade security and intuitive user experience.",
-      technologies: ["Ionic",  "Angular",  "Laravel"],
+      technologies: ["Ionic", "Angular", "Laravel"],
       image: "/fintech-mobile.png",
       results: ["300% increase in mobile transactions", "Zero security incidents", "4.9/5 user rating"],
       liveUrl: "#",
@@ -175,7 +175,7 @@ export default function PortfolioPage() {
         "Colife is a dynamic social networking app designed to connect like-minded individuals and foster meaningful interactions. Share, explore, and engage with a vibrant community that makes your social life more enriching and fun!",
       problem: "Financial institution needed a secure, user-friendly mobile banking solution.",
       solution: "Created feature-rich mobile app with bank-grade security and intuitive user experience.",
-      technologies: ["Ionic",  "Angular", "Nodejs" ],
+      technologies: ["Ionic", "Angular", "Nodejs"],
       image: "/fintech-mobile.png",
       results: ["300% increase in mobile transactions", "Zero security incidents", "4.9/5 user rating"],
       liveUrl: "#",
@@ -240,32 +240,32 @@ export default function PortfolioPage() {
 
   const teamMembers = [
     {
+      name: "Bhargav Jadav",
+      position: "Full Stack Developer",
+      expertise: "React, Node.js, MongoDB",
+      bio: "Passionate about creating scalable web applications with modern technologies.",
+      avatar: "/professional-developer-avatar.PNG",
+    },
+    {
+      name: "Nisha Makwana",
+      position: "UI/UX Designer",
+      expertise: "Figma, Adobe XD, User Research",
+      bio: "Crafting beautiful and intuitive user experiences that delight users.",
+      avatar: "/female-designer-avatar.PNG",
+    },
+    {
       name: "Jainik Patel",
-      position: "Lead Full Stack Developer",
-      expertise: "React, Node.js, Cloud Architecture",
-      avatar: "/boy.webp",
-      bio: "8+ years experience in building scalable web applications",
-    },
-    {
-      name: "Priya Sharma",
-      position: "Senior UI/UX Designer",
-      expertise: "User Experience, Design Systems, Prototyping",
-      avatar: "/girl.webp",
-      bio: "Award-winning designer with expertise in user-centered design",
-    },
-    {
-      name: "B Jadav",
-      position: "Mobile App Developer",
-      expertise: "React Native, Flutter, iOS/Android",
-      avatar: "/boy.webp",
-      bio: "Specialized in cross-platform mobile development",
-    },
-    {
-      name: "Angrio",
       position: "DevOps Engineer",
-      expertise: "AWS, Docker, CI/CD, Kubernetes",
-      avatar: "/girl.webp",
-      bio: "Expert in cloud infrastructure and deployment automation",
+      expertise: "AWS, Docker, Kubernetes",
+      bio: "Ensuring smooth deployments and scalable infrastructure for all projects.",
+      avatar: "/devops-engineer-avatar.PNG",
+    },
+    {
+      name: "Harshid Bhai",
+      position: "Mobile Developer",
+      expertise: "React Native, Flutter, iOS",
+      bio: "Building cross-platform mobile apps that provide seamless user experiences.",
+      avatar: "/mobile-developer-avatar.PNG",
     },
   ]
 
@@ -370,7 +370,7 @@ export default function PortfolioPage() {
                 className="group relative bg-neutral-800/30 backdrop-blur-sm p-4 rounded-xl border border-neutral-700 hover:border-violet-500/50 transition-all duration-300 hover:scale-105 text-center"
               >
                 <div className={`w-12 h-12 bg-gradient-to-r rounded-lg mx-auto mb-3 flex items-center justify-center`}>
-                    <img src={tech.color} alt="" />
+                  <img src={tech.color} alt="" />
                 </div>
                 <h3 className="text-sm font-bold text-white mb-1">{tech.name}</h3>
                 <p className="text-xs text-violet-400">{tech.category}</p>
@@ -400,11 +400,10 @@ export default function PortfolioPage() {
                 <button
                   key={category}
                   onClick={() => setActiveFilter(category)}
-                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                    activeFilter === category
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeFilter === category
                       ? "bg-gradient-to-r from-violet-600 to-cyan-600 text-white"
                       : "bg-neutral-800 text-neutral-400 hover:text-white hover:bg-neutral-700"
-                  }`}
+                    }`}
                 >
                   {category}
                 </button>
@@ -550,29 +549,35 @@ export default function PortfolioPage() {
       </section>
 
       {/* Team Introduction */}
-      <section className="py-16 bg-neutral-950">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-neutral-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6 text-white">
               Meet Our{" "}
               <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">Team</span>
             </h2>
-            <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-neutral-400 max-w-3xl mx-auto px-4">
               Our talented team of experts who bring your ideas to life with passion and precision.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {teamMembers.map((member, index) => (
               <div
                 key={member.name}
-                className="bg-neutral-800/50 backdrop-blur-sm p-8 rounded-2xl border border-neutral-700 hover:border-violet-500/50 transition-all duration-300 text-center group hover:scale-105"
+                className="bg-neutral-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-neutral-700 hover:border-violet-500/50 transition-all duration-300 text-center group hover:scale-105"
               >
-                <div className="text-6xl mb-4"><img src={member.avatar} alt="" /></div>
-                <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                <p className="text-violet-400 text-sm mb-3">{member.position}</p>
-                <p className="text-neutral-400 text-sm mb-4">{member.expertise}</p>
-                <p className="text-neutral-500 text-xs leading-relaxed">{member.bio}</p>
+                <div className="mb-4 sm:mb-6">
+                  <img
+                    src={member.avatar}
+                    alt={`${member.name} avatar`}
+                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full mx-auto object-cover border-2 border-violet-500/20 group-hover:border-violet-500/50 transition-colors duration-300"
+                  />
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2">{member.name}</h3>
+                <p className="text-violet-400 text-sm sm:text-base mb-3">{member.position}</p>
+                <p className="text-neutral-400 text-xs sm:text-sm mb-4 font-medium">{member.expertise}</p>
+                <p className="text-neutral-500 text-xs sm:text-sm leading-relaxed">{member.bio}</p>
               </div>
             ))}
           </div>
