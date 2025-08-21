@@ -244,7 +244,7 @@ export default function PortfolioPage() {
       position: "Full Stack Developer",
       expertise: "React, Node.js, MongoDB",
       bio: "Passionate about creating scalable web applications with modern technologies.",
-      avatar: "/fullstackk.jpg",
+      avatar: "/fullstack.png",
     },
     {
       name: "Nisha Makwana",
