@@ -44,8 +44,8 @@ export default function Header() {
       description: "Digital Solution for Lean Manufacturing",
     },
     {
-      name: "Tracker.in",
-      href: "https://trakker.in/",
+      name: "Trakkar.in",
+      href: "https://trakkar.in/",
       icon: Radar,
       description: "TempHeaven provides quick and temporary email addresses.",
     },
