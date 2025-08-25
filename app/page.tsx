@@ -391,7 +391,7 @@ export default function HomePage() {
       <section className="py-24 bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
-            Ready to Build Something Amazing?
+            Ready to Build Something Amazing ?
           </h2>
           <p className="text-xl text-violet-100 mb-8 max-w-2xl mx-auto">
             Let's discuss your project and turn your vision into reality.
